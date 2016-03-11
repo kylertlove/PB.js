@@ -1,9 +1,8 @@
 
 
-var Library = {
-    name: "PBandJS",
+var PBJS = {
+    name: "PBJ_S",
     greet: function(){
-
-    alert("Hello from the " + Library.name + " library.");
+    confirm("Hello from the " + PBJS.name + " library.");
     }
 };
