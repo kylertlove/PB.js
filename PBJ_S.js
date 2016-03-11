@@ -41,7 +41,6 @@ PBJS.fuckyou = function(){
   for(var i = 0; i < fucks.length; i++){
    fucks[i].innerHTML = 'FUCK YOU';
 }
-
 };
 
 
