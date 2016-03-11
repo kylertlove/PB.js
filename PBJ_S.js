@@ -1,8 +1,10 @@
 
+//http://checkman.io/blog/creating-a-javascript-library/
 
 var PBJS = {
     name: "PBJ_S",
     greet: function(){
-    confirm("Hello from the " + PBJS.name + " library.");
+
+    alert("Hello from the " + PBJS.name + " library.");
     }
 };
