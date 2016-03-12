@@ -15,32 +15,46 @@ function define_PBJS(){
 PBJS.ver = function(){
       console.log("Version: 0.1\n Author: 'Kyler Love'\n Updated: '11 March 2016'");
 };
+  //greet
 PBJS.greet = function(){
       console.log("Welcome to Peanut Butter JavaScript... or Peanut Butter Jelly Sandwich... Both are delicious");
 };
 
 //adds values.  pass in the 'id' of the two inputs
 PBJS.add = function(a, b){
-  var A = document.getElementById(a).value;
-  var B = document.getElementById(b).value;
+  /* jshint ignore:start */
+  let A = document.getElementById(a).value;
+  let B = document.getElementById(b).value;
+  /* jshint ignore:end */
   console.log(parseInt(A) + parseInt(B));
     return A + B;
 };
 
 //subtracts values.  pass in the 'id' of the two inputs
 PBJS.subtract = function(a, b){
-  var A = document.getElementById(a).value;
-  var B = document.getElementById(b).value;
+  /* jshint ignore:start */
+  let A = document.getElementById(a).value;
+  let B = document.getElementById(b).value;
+  /* jshint ignore:end */
   console.log(parseInt(A) - parseInt(B));
     return A - B;
 };
 
-PBJS.fuckyou = function(){
-  var fucks = document.querySelectorAll("h1, h2, h3, h4, h5, h6, button, input, p");
+//fuck it all
+PBJS.fuckitall = function(){
+  /* jshint ignore:start */
+  let fucks = document.querySelectorAll("h1, h2, h3, h4, h5, h6, button, input, p");
+  /* jshint ignore:end */
   console.log(fucks.innerHTML);
   for(var i = 0; i < fucks.length; i++){
-   fucks[i].innerHTML = 'FUCK YOU';
+   fucks[i].innerHTML = 'FUCK IT ALL';
 }
+};
+
+PBJS.TraceyHarrisonManifesto = function(){
+  var NothingMatters = "<div style='Font-size: 200px;'>NOTHING MATTERS<div>";
+  var bod = document.querySelector('body');
+  bod.innerHTML = NothingMatters;
 };
 
 
