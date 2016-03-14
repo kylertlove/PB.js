@@ -2,7 +2,6 @@
 
   'use strict';
 
-
   function define_PBJS() {
 
     var PBJS = {};
@@ -15,12 +14,12 @@
     };
     //greet
     PBJS.greet = function() {
-      console.log("Welcome to Peanut Butter JavaScript... or Peanut Butter Jelly Sandwich... Both are delicious");
+      console.log("Welcome to Peanut Butter JavaScript...\n or Peanut Butter Jelly Sandwich...\n Both are delicious");
     };
 
     //adds values.  pass in the 'id' of the two inputs
     PBJS.add = function(a, b) {
-      /* jshint ignore:start */
+  /* jshint ignore:start */
       let A = document.getElementById(a).value;
       let B = document.getElementById(b).value;
       /* jshint ignore:end */
@@ -75,9 +74,19 @@
       tag.innerHTML = now.toLocaleTimeString();
     };
 
+    PBJS.QuickGuide = function (){
+
+      var stuff = document.querySelectorAll("input");
+        for(var i =0; i < stuff.length; i++)
+        {
+             console.log(stuff[i]);
+        }
+
+    };
 
     ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End of library<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
+      //call things on load
+      //PBJS.fuckitall();
     return PBJS;
 
   }
