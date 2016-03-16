@@ -63,6 +63,7 @@
     //Tracey's take on current events
     PBJS.The_Tracey_Harrison_Manifesto = function() {
       var NothingMatters = "<div style='Font-size: 200px;'>NOTHING MATTERS<div>";
+    //  document.createElement(div);
       var bod = document.querySelector('body');
       bod.innerHTML = NothingMatters;
     };
@@ -74,15 +75,31 @@
       tag.innerHTML = now.toLocaleTimeString();
     };
 
+    //writes all text field values from the
+    //first textbox, into all other text values
     PBJS.QuickGuide = function (){
-
       var stuff = document.querySelectorAll("input");
-        for(var i =0; i < stuff.length; i++)
+        for(var i = 0; i < stuff.length; i++)
         {
              console.log(stuff[i]);
+             stuff[i].value = stuff[0].value;
         }
 
     };
+
+    //im tired
+    PBJS.NewFunc = function (){
+      var UserName = document.getElementById('first').value;
+    var ng = {
+      Name: UserName,
+      Time: Date(),
+      IsAdmin: true
+    };
+
+    for (var n in ng){
+
+    }
+  };
 
     ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End of library<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       //call things on load
