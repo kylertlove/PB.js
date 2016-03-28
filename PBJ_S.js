@@ -63,7 +63,6 @@
     //Tracey's take on current events
     PBJS.The_Tracey_Harrison_Manifesto = function() {
       var NothingMatters = "<div style='Font-size: 200px;'>NOTHING MATTERS<div>";
-    //  document.createElement(div);
       var bod = document.querySelector('body');
       bod.innerHTML = NothingMatters;
     };
