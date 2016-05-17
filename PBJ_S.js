@@ -6,7 +6,16 @@
 
     var PBJS = {};
 
-    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>beginning of library<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>beginning of library Functions<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    PBJS.I = function(elem){
+      return document.getElementById(elem);
+    };
+    PBJS.C = function(elem){
+      return document.getElementsByClassName(elem);
+    };
+    PBJS.T = function(elem){
+      return document.getElementsByTagName(elem);
+    };
 
     // About
     PBJS.ver = function() {
@@ -20,8 +29,8 @@
     //adds values.  pass in the 'id' of the two inputs
     PBJS.add = function(a, b) {
   /* jshint ignore:start */
-      let A = document.getElementById(a).value;
-      let B = document.getElementById(b).value;
+      let A = PBJS.I(a).value;
+      let B = PBJS.I(b).value;
       /* jshint ignore:end */
       console.log(parseInt(A) + parseInt(B));
       return A + B;
@@ -30,8 +39,8 @@
     //subtracts values.  pass in the 'id' of the two inputs
     PBJS.subtract = function(a, b) {
       /* jshint ignore:start */
-      let A = document.getElementById(a).value;
-      let B = document.getElementById(b).value;
+      let A = PBJS.I(a).value;
+      let B = PBJS.I(b).value;
       /* jshint ignore:end */
       console.log(parseInt(A) - parseInt(B));
       return A - B;
@@ -63,13 +72,13 @@
     //Tracey's take on current events
     PBJS.The_Tracey_Harrison_Manifesto = function() {
       var NothingMatters = "<div style='Font-size: 200px;'>NOTHING MATTERS<div>";
-      var bod = document.querySelector('body');
+      var bod = PBJS.T('body');
       bod.innerHTML = NothingMatters;
     };
 
     //turn the innerHTML of any element into a clock
     PBJS.AddClock = function(elem) {
-      var tag = document.getElementById(elem);
+      var tag = PBJS.I(elem);
       var now = new Date();
       tag.innerHTML = now.toLocaleTimeString();
     };
@@ -77,7 +86,7 @@
     //writes all text field values from the
     //first textbox, into all other text values
     PBJS.QuickGuide = function (){
-      var stuff = document.querySelectorAll("input");
+      var stuff = PBJS.T("input");
         for(var i = 0; i < stuff.length; i++)
         {
              console.log(stuff[i]);
@@ -88,7 +97,7 @@
 
     //im tired
     PBJS.NewFunc = function (){
-      var UserName = document.getElementById('first').value;
+      var UserName = PBJS.I('first').value;
     var ng = {
       Name: UserName,
       Time: Date(),
@@ -100,9 +109,8 @@
     }
   };
 
-    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End of library<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-      //call things on load
-      //PBJS.fuckitall();
+    ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End of library Functions<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     return PBJS;
 
   }
