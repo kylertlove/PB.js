@@ -1,4 +1,4 @@
-# PBJ_S
+# PB.js
 Peanut Butter JavaScript Library
 or 
 Peanut Butter Jelly Sandwiches.  
